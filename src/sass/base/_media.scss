@@ -1,16 +1,50 @@
-@media (max-width: 1024px) {
-    .container {
-        max-width: 90%;
+@media (max-width: 2560px) {
+    .carousel {
+        .tns-outer {
+            display: block;
+            margin: 0 auto;
+            width: 750px;
+        }
     }
 }
 
-@media (min-width: 850px) and (max-width:991px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .carousel {
+        .tns-outer {
+            display: block;
+            margin: 0 auto;
+            width: 575px;
+        }
+        .prev {
+            left: 66px;
+        }
+        .next {
+            right: 70px;
+        }
+    }
+}
+
+
+@media (min-width: 850px) and (max-width:1024px) {
     .container {
         max-width: 90%;
     }
     .benefits {
         &__icon {
             width: 235px;
+        }
+    }
+    .carousel {
+        .tns-outer {
+            display: block;
+            margin: 0 auto;
+            width: 575px;
+        }
+        .prev {
+            left: 46px;
+        }
+        .next {
+            right: 50px;
         }
     }
 }
@@ -68,6 +102,16 @@
         }
         .consultation__descr {
             margin-top: 45px;
+        }
+    }
+    .carousel {
+        .tns-outer {
+            display: block;
+            margin: 0 auto;
+            width: 575px;
+        }
+        .prev, .next {
+            display: none;
         }
     }
 }
@@ -155,6 +199,19 @@
         }
         .feed-form {
             margin-top: 55px;
+        }
+    }
+    .carousel {
+        .carousel__inner {
+            width: 75%;
+        }
+        .tns-outer {
+            display: block;
+            margin: 0 auto;
+            width: 75%;
+        }
+        .prev, .next {
+            display: none;
         }
     }
 }

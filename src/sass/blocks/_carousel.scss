@@ -4,8 +4,11 @@
         position: relative;
         width: 750px;
         margin: 0 auto;
+        img {
+            width: 100%;
+        }
     }
-    .slick-prev {
+    .prev {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -17,7 +20,7 @@
             height: 50px;
         }
     }
-    .slick-next {
+    .next {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
