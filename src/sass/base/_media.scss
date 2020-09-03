@@ -10,10 +10,13 @@
 
 @media (min-width: 1025px) and (max-width: 1440px) {
     .carousel {
-        .tns-outer {
-            display: block;
-            margin: 0 auto;
-            width: 575px;
+        &__inner {
+            width: 100%;
+            .tns-outer{
+                display: block;
+                margin: 0 auto;
+                width: 750px;
+            }
         }
         .prev {
             left: 66px;
@@ -45,6 +48,11 @@
         }
         .next {
             right: 50px;
+        }
+    }
+    .catalog {
+        &__content {
+            justify-content: space-around;
         }
     }
 }
@@ -109,9 +117,21 @@
             display: block;
             margin: 0 auto;
             width: 575px;
+            .tns-nav {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 100%;
+            }
         }
         .prev, .next {
             display: none;
+        }
+
+    }
+    .catalog {
+        &__content {
+            justify-content: space-around;
         }
     }
 }
@@ -209,9 +229,34 @@
             display: block;
             margin: 0 auto;
             width: 75%;
+            .tns-nav {
+                display: block;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 100%;
+            }
         }
         .prev, .next {
             display: none;
+        }
+    }
+    .catalog {
+        &__tabs {
+            margin-top: 50px;
+        }
+        &__tab {
+            height: 45px;
+            font-size: 15px;
+            line-height: 43px;
+            margin: 0 3px;
+        }
+        &__content {
+            justify-content: space-around;
+        }
+        &-item {
+            width: 250px;
+            margin-bottom: 5px;
         }
     }
 }
@@ -305,6 +350,30 @@
         .feed-form {
             margin: 0 auto;
             margin-top: 50px;
+        }
+    }
+
+    .catalog {
+        &-item {
+            width: 220px;
+            &__link {
+                margin-top: 45px;
+            }
+            hr {
+                margin-top: 0px;
+            }
+            &__price {
+                font-size: 18px;
+            }
+        }
+        &__tab {
+            font-size: 14px;
+            line-height: 45px;
+        }
+        .button_catalog {
+            width: 115px;
+            height: 35px;
+            font-size: 13px;
         }
     }
 }
@@ -419,6 +488,33 @@
                 height: 45px;
                 font-size: 10px;
             }
+        }
+    }
+    .carousel {
+        .tns-nav {
+            button {
+                margin: 0 10px;
+            }
+        }
+    }
+    .catalog {
+        &__tabs {
+            margin-top: 35px;
+        }
+        &__tab {
+            height: 40px;
+            font-size: 10px;
+            line-height: 41px;
+            transform: skew(-5deg);
+            div {
+                transform: skew(5deg);
+            }
+            &:hover {
+                box-shadow: 2px 2px 5px $main-color;
+            }
+        }
+        &__content {
+            margin-top: 35px;
         }
     }
 }

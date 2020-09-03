@@ -28,19 +28,27 @@ const slider = tns({
   nav: false,
   passive: false,
   responsive: {
+    320: {
+      nav: true
+    },
     767: {
-      items: 1
+      items: 1,
+      nav: true
     },
     768: {
       fixedWidth: 575,
-      items: 1
+      items: 1,
+      nav: true
+    },
+    850: {
+      nav: false
     },
     1024: {
       fixedWidth: 575,
       items: 1
     },
     1025: {
-      fixedWidth: 575,
+      fixedWidth: 750,
       items: 1
     },
     1440: {

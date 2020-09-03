@@ -32,5 +32,18 @@
             height: 50px;
         }
     }
+    .tns-nav {
+        button{
+            margin: 0 20px;
+            border-width: 1px;
+            border-radius: 25%;
+            border-color: #050505;
+            background-color: #050505;
+        }
+        .tns-nav-active {
+            background-color: $main-color;
+            border-color: $main-color;
+        }
+    }
 }
 
