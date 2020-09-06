@@ -31,10 +31,43 @@ $(document).ready(function() {
 
   $('.button_catalog').each(function(i) {
     $(this).on('click', function() {
-      $('#order, .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+      $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
       $('.overlay, #order').fadeIn('slow');
     });
-  })
+  });
+
+  function validateForms(form) {
+    $(form).validate({
+      rules: {
+       name: {
+         required: true,
+         minlength: 2
+       },
+       phone : 'required',
+       email : {
+         required: true,
+         email: true
+       }
+      },
+      messages: {
+       name: {
+         required: "Пожалуйста, введите имя",
+         minlength: jQuery.validator.format("Имя должно состоять как минимум из {0} сивмолов!")
+       },
+       phone: "Пожалуйста, введите номер телефона",
+       email: {
+         required: "Пожалуйста, введите e-mail",
+         email: "Почтовый адрес должен быть в формате example@examle.com"
+       }
+     }
+ });
+ };
+
+ validateForms('#consultation-form');
+ validateForms('#consultation form');
+ validateForms('#order form');  
+
+ $('input[name=phone]').mask("+7 (999) 999-99-99");
 });
 
 const slider = tns({
