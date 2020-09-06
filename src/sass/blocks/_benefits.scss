@@ -8,6 +8,11 @@
         justify-content: space-between;
     }
     &__icon {
+        &_animated {
+            &:hover {
+                animation: heartbeat 1.5s ease infinite;
+            }
+        }
         width: 247px;
         font-size: 14px;
         font-weight: 300;

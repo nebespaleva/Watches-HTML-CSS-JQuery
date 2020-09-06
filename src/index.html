@@ -6,11 +6,12 @@
 	<title>Pulsometr</title>
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-	 <section class="promo">
+	 <section id="up" class="promo">
 		<div class="container">
 			<header class="header">
 				<a href="#" class="header__logo">
@@ -71,7 +72,7 @@
 					Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!
 				</div>
 				<div class="benefits__icon">
-					<img src="icons/benefit/heart.png" alt="heart">
+					<img src="icons/benefit/heart.png" alt="heart" class="benefits__icon_animated">
 					<span>Заботимся о здоровье</span>
 					Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!
 
@@ -104,7 +105,7 @@
 			</form>
 		 </div>
 	 </section>
-	 <section class="carousel">
+	 <div class="carousel">
 		<div class="container">
 			<div class="carousel__inner">
 				<div>
@@ -117,10 +118,10 @@
 					<img src="img/slider/watch_slider_3.jpg" alt="3">
 				</div>
 			</div>
-			<button type="button" class="prev"><img src="icons/left.png"></button>
-			<button type="button" class="next"><img src="icons/right.png"></button>
+			<button type="button" class="prev"><img src="icons/left.png" alt="left"></button>
+			<button type="button" class="next"><img src="icons/right.png" alt="right"></button>
 		</div>
-	 </section>
+	 </div>
 
 	 <section class="catalog">
 		 <div class="container">
@@ -375,7 +376,7 @@
 	 <section class="feedback">
 		 <div class="container">
 			 <h2 class="title">отзывы клиентов</h2>
-			<div class="feedback__wrapper">
+			<div class="feedback__wrapper wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
 				<img src="img/feedback/irina_feedback.jpg" alt="feedback" class="feedback__img">
 				<div class="feedback__descr">
 					<div class="feedback__name">Ирина Иванченко</div>
@@ -385,7 +386,7 @@
 					<br><br>Спасибо, RunSmart!
 				</div>
 			</div>
-			<div class="feedback__wrapper feedback__wrapper_margin">
+			<div class="feedback__wrapper feedback__wrapper_margin wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
 				<img src="img/feedback/ivan_feedback.jpg" alt="feedback" class="feedback__img">
 				<div class="feedback__descr">
 					<div class="feedback__name">Иван Сёмочкин</div>
@@ -394,7 +395,7 @@
 					<br><br>С ними подготовился к своему первому полумарафону! Спасибо!!!
 				</div>
 			</div>
-			<div class="feedback__wrapper">
+			<div class="feedback__wrapper wow animate__animated animate__fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
 				<img src="img/feedback/julia_feedback.png" alt="feedback" class="feedback__img">
 				<div class="feedback__descr">
 					<div class="feedback__name">Юлия Дашкина</div>
@@ -406,9 +407,10 @@
 					Спасибо!!!
 				</div>
 			</div>
+		</div>
 	 </section>
 	 <footer class="footer">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.4304811959887!2d37.64480731622028!3d55.768394980557595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2sua!4v1599326634842!5m2!1sru!2sua" width="100%" height="630" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.4304811959887!2d37.64480731622028!3d55.768394980557595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2sua!4v1599326634842!5m2!1sru!2sua" width="100%" height="630" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 		 <div class="footer__info">
 			 <address class="footer__addr">Москва, Мясницкий проезд, д.3с1</address>
 			 <a class="footer__phone" href="tel:84999228974">8 (499) 922-89-74</a>
@@ -452,10 +454,15 @@
 			<div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
 		</div>
 	 </div>
+	 <a href="#up" class="pageup">
+		<img src="icons/chevron-circle-up-solid.svg" alt="up">
+	 </a>
+	 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/wow.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

@@ -287,7 +287,7 @@
         .tns-outer {
             display: block;
             margin: 0 auto;
-            width: 75%;
+            width: 60%;
             .tns-nav {
                 display: block;
                 position: absolute;
@@ -750,12 +750,13 @@
             height: 125px;
         }
         &__descr {
-            margin-top: 15px;
-            width: 290px;
+            width: 320px;
             text-align: center;
             font-size: 12px;
             line-height: 16px;
             padding: 0 20px;
+            margin: 0 auto;
+            margin-top: 15px;
         }
         &__name {
             font-size: 14px;
